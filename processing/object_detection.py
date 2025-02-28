@@ -1,12 +1,15 @@
 import cv2
 
 def detect_objects(image, model):
-    results = model(image)
+    results = model(image) 
     detected_objects = []
-    for result in results.xyxy[0]:
-        x1, y1, x2, y2, conf, cls = result
-        detected_objects.append((int(cls), (int(x1), int(y1), int(x2), int(y2))))
+    
+    for box, conf, cls in zip(results[0].boxes.xyxy, results[0].boxes.conf, results[0].boxes.cls):
+        x1, y1, x2, y2 = map(int, box.tolist()) 
+        detected_objects.append((int(cls.item()), (x1, y1, x2, y2)))
+    
     return detected_objects
+
 
 def draw_detected_objects(image, detected_objects, class_names):
     for cls, (x1, y1, x2, y2) in detected_objects:
