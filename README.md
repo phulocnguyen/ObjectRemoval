@@ -17,22 +17,18 @@ This project implements object removal from images using object detection and se
 
 ### Prerequisites
 
-Ensure you have the following installed:
+**Ensure you have the following installed:**
 
-Python 3.8+
+**Python 3.8+**
 
-PyTorch
+**PyTorch**
 
-OpenCV
-
-Swin Transformer
-
-YOLOv8
+**OpenCV**
 
 ### Install Dependencies
-
+```bash
 pip install -r requirements.txt
-
+```
 ### Usage
 
 Run Object Removal
@@ -54,25 +50,19 @@ python main.py --input path/to/image.jpg --output path/to/output.jpg
 
 ### Model Details
 
-**Swin Transformer** Used for instance segmentation.
+**Swin Transformer** (Used for instance segmentation): Provides accurate and efficient segmentation for complex objects.
 
-Provides accurate and efficient segmentation for complex objects.
+**YOLOv8** (Used for object detection): Identifies objects in images before segmentation.
 
-**YOLOv8** Used for object detection.
-
-Identifies objects in images before segmentation.
-
-**Inpainting Method**
-
-Uses Lama Model & inpainting algorithm to reconstruct missing regions.
+**Inpainting Method**: Uses Lama Model & inpainting algorithm to reconstruct missing regions.
 
 ### Acknowledgments
 
-Swin Transformer: Microsoft Research
+**Swin Transformer**: Microsoft Research
 
-YOLOv8: Ultralytics
+**YOLOv8**: Ultralytics
 
-Lama model
+**Lama model**
 
 ### License
 
