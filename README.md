@@ -1,7 +1,7 @@
 # Object Removal
 ## Overview
 
-This project implements object removal from images using object detection and segmentation with the Swin Transformer. The pipeline detects objects, allows the user to select an object to remove, and then applies image inpainting to seamlessly fill the removed area.
+This project implements object removal from images using YOLOv8 for object detection, SwinTransformer for segmentation and the LaMa model for image inpainting. The pipeline detects objects, allows users to select an object for removal, and seamlessly fills the removed area using advanced inpainting techniques for natural-looking results.
 
 ## Features
 
