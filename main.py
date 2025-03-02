@@ -1,7 +1,7 @@
 import cv2
 import argparse
 import os
-from models.sam_model import load_sam_model
+from models.SwinTransformer import load_sam_model
 from models.yolo_model import load_yolo_model
 from processing.segmentation import segment_object
 from processing.object_detection import detect_objects, draw_detected_objects
@@ -12,7 +12,6 @@ from utils.video_utils import initialize_video_writer, apply_optical_flow
 import cv2
 
 def process_image(image_path, output_path):
-    """Process a single image for object removal."""
     image = cv2.imread(image_path)
     predictor = load_sam_model()
     yolo_model = load_yolo_model()
@@ -45,7 +44,6 @@ def process_image(image_path, output_path):
 
 
 def process_video(video_path, output_path, batch_size=10, resume=False):
-    """Process video frame by frame for object removal with Optical Flow."""
     cap = cv2.VideoCapture(video_path)
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -79,7 +77,7 @@ def process_video(video_path, output_path, batch_size=10, resume=False):
     print(f"Processed video saved as {output_path}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Object Removal using AI")
+    parser = argparse.ArgumentParser(description="Object Removal")
     parser.add_argument("--mode", type=str, required=True, choices=["image", "video"], help="Processing mode")
     parser.add_argument("--input", type=str, required=True, help="Path to input file")
     parser.add_argument("--output", type=str, required=True, help="Path to save output")
