@@ -1,0 +1,12 @@
+torch>=2.0.0
+torchvision
+numpy
+opencv-python
+tqdm
+ultralytics
+einops
+scipy
+matplotlib
+timm
+pycocotools
+transformers
