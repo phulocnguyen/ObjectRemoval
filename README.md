@@ -1,4 +1,4 @@
-# Object Removal with YOLOv8, Swin SegFormer, MAT
+# Object Removal with YOLOv8, Swin SegFormer and MAT
 
 ## Overview
 
