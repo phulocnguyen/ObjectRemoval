@@ -10,3 +10,5 @@ matplotlib
 timm
 pycocotools
 transformers
+albumentations
+mmcv
