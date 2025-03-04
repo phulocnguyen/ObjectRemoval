@@ -1,7 +1,7 @@
 # Object Removal
 ## Overview
 
-This project implements object removal from images using YOLOv8 for object detection, SwinTransformer for segmentation and the LaMa model for image inpainting. The pipeline detects objects, allows users to select an object for removal, and seamlessly fills the removed area using advanced inpainting techniques for natural-looking results.
+This project implements object removal from images and videos using YOLOv8 for object detection, SwinTransformer for segmentation and the LaMa model for image inpainting. The pipeline detects objects, allows users to select an object for removal, and seamlessly fills the removed area using advanced inpainting techniques for natural-looking results.
 
 ## Features
 
