@@ -28,6 +28,12 @@ class SwinSegFormer(nn.Module):
     def forward(self, x):
         return self.model(x)
 
+def load_swinsegformer_model():
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = SwinSegFormer(num_classes=2, pretrained=True).to(device)
+    model.eval()
+    return model
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model = SwinSegFormer(num_classes=2, pretrained_path="segformer_mit-b2.pth").to(device)
