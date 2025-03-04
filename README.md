@@ -41,6 +41,7 @@ python main.py --mode video --input path/to/video.mp4 --output path/to/output.mp
 ```
 
 ## Example Workflow
+![Object Removal Pipeline](pipeline.png)
 
 1. **Object Detection**: The program detects objects in the input image or video using **YOLOv8**.
 2. **User Selection**: The user selects an object class for removal.
@@ -49,6 +50,7 @@ python main.py --mode video --input path/to/video.mp4 --output path/to/output.mp
    - The segmented object is removed.
    - The missing area is reconstructed using **Masked Attention Transformer (MAT)**.
 5. **Final Output**: The processed image or video is saved at the specified output path.
+
 
 ## Model Details
 
